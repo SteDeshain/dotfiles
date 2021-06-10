@@ -1,0 +1,16 @@
+# file name or path cannot contain any space characters
+# name					path(if several files are specified, they must be under the same directory)
+systemd-networkd/		/etc/systemd/network/*.sh
+i3config				/home/stedeshain/.config/i3/config
+xprofile				/home/stedeshain/.xprofile
+bashrc					/home/stedeshain/.bashrc
+picom.conf				/home/stedeshain/.config/picom/picom.conf
+Xresources				/home/stedeshain/.Xresources
+i3status-config			/home/stedeshain/.config/i3status/config
+bin/					/home/stedeshain/bin/*
+ranger/					/home/stedeshain/.config/ranger/*
+dunstrc					/home/stedeshain/.config/dunst/dunstrc
+ideavimrc				/home/stedeshain/.config/ideavim/ideavimrc
+nvimrc					/home/stedeshain/.config/nvim/init.vim
+nvimplug				/home/stedeshain/.local/share/nvim/site/autoload/plug.vim
+multihead-switchers/	/home/stedeshain/.screenlayout/dual-with-desktop-monitor.sh /home/stedeshain/.screenlayout/single-monitor.sh

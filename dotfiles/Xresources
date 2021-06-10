@@ -1,0 +1,37 @@
+!URxvt.perl-ext-common: default,tabbed,xim-onthespot
+!URxvt.perl-ext-common: default,tabbed
+
+! colors
+URxvt.depth: 32
+! Set blue color to a lighter one
+URxvt.color4: #5179f1
+URxvt.color12: #66ccff
+! Set red color to a lighter one
+URxvt.color1: #d15656
+URxvt.color9: #ff3300
+! Magenta
+URxvt.color5: #da70d6
+URxvt.color13: #da50d6
+URxvt.background: [80]black
+URxvt.foreground: white
+! white background
+!URxvt.background: [80]white
+!URxvt.foreground: black
+
+! input method
+URxvt.inputMethod:fcitx5
+URxvt.imLocale:zh_CN.UTF-8
+!URxvt.preeditType:OffTheSpot,None
+!URxvt.imFont:-*-WenQuanYi Micro Hei Mono-medium-r-normal--*-10-*-*-m-*-*-*
+
+! font
+URxvt.letterSpace:-1
+URxvt.font:xft:DejaVu Sans Mono:size=9:style=Regular:antialias=true,\
+           xft:WenQuanYi Micro Hei Mono:size=9:style=Regular:antialias=true,\
+           xft:Font Awesome 5 Free Regular:size=4:antialias=true,\
+           xft:Font Awesome 5 Brands Regular:size=4:antialias=true,\
+           xft:Font Awesome 5 Free Solid:size=4:antialias=true
+
+! scroll bar style 
+URxvt.scrollstyle:plain
+URxvt.scrollBar_right:true

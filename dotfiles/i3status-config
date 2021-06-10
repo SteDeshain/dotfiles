@@ -1,0 +1,93 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+		output_format = i3bar
+        colors = true
+		color_good = "#339900"
+		color_bad = "#ff6600"
+        interval = 1
+}
+
+#order += "ipv6"
+order += "ethernet bond0"
+order += "wireless wlan0"
+order += "ethernet enp7s0"
+order += "battery all"
+order += "disk /"
+order += "disk /home"
+order += "load"
+order += "memory"
+order += "cpu_usage"
+order += "volume master"
+order += "tztime local"
+
+ethernet bond0 {
+        format_up = " %ip"
+        format_down = " "
+}
+
+wireless wlan0 {
+        format_up = " %essid:%quality "
+        format_down = " "
+}
+
+ethernet enp7s0 {
+        format_up = " %speed"
+        format_down = " "
+}
+
+battery all {
+        format = "%status %percentage"
+		# 不显示小数部分
+		integer_battery_capacity = true
+		# 以上次充满时的电量作为总电量, 而不是电池出厂时的电量作为总电量
+		last_full_capacity = true
+		format_down = ""
+		status_chr = ""
+		status_bat = ""
+		#status_unk = ""
+		status_unk = ""
+		status_full = ""
+		low_threshold = "20"
+		threshold_type = "percentage"
+}
+
+disk "/" {
+        format = "/ %avail"
+}
+disk "/home" {
+		format = "/home %avail"
+}
+
+# number of processes waiting for CPU time in the last 1, 5 and 15 minutes
+load {
+        format = " %1min"
+		max_threshold = "5"
+}
+
+memory {
+        format = " %used-%available"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
+
+cpu_usage {
+	format = " %usage"
+}
+
+volume master {
+	device = "default"
+	#device = "alsa_output.pci-0000_00_1b.0.analog-stereo"
+	format = " %volume"
+	format_muted = " %volume"
+}
+
+tztime local {
+        format = " %Y-%m-%d  %H:%M:%S"
+}

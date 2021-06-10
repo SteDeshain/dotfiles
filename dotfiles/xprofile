@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# A script that will be read by lightdm
+# A good place to place necessary shell variablesneeded by graphic environment
+
+# lang for desktop environment
+export LANG=zh_CN.UTF-8
+
+# default terminal for i3
+export TERMINAL=st
+
+# fix qt5 icon theme
+export QT_QPA_PLATFORMTHEME='qt5ct'
+
+# add ~/bin to PATH for i3 to use
+export PATH="$PATH:$HOME/bin"
+
+# export EDITOR as nvim
+export EDITOR=nvim

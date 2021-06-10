@@ -1,0 +1,35 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+#PS1='[\u@\h \W]\$ '
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]\[\033[0;33m\][\t]\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# alias to restart iwd.service
+alias fixwifi='sudo systemctl restart iwd.service'
+
+# alias to ping to www.baidu.com for testing the network connection
+alias testinet='ping www.baidu.com'
+
+# alias to add executable permissions to a file
+alias addx='chmod +x'
+
+# alias to set screen layout
+alias sd='~/.screenlayout/dual-with-desktop-monitor.sh && ~/.fehbg'
+alias stv='~/.screenlayout/dual-with-tv.sh && ~/.fehbg'
+alias stvs='~/.screenlayout/dual-with-tv-slant.sh && ~/.fehbg'
+alias ss='~/.screenlayout/single-monitor.sh && ~/.fehbg'
+
+# show tty-clock
+alias clock='tty-clock -s -c -n'
+
+# alias to refresh current pwd
+alias fr='cd $(pwd)'
+
+alias lg='lazygit'
+
+alias ra='ranger'
